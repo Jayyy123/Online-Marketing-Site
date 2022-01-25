@@ -1,0 +1,23 @@
+{%extends 'main.html' %}
+
+{%load static%}
+{%block content%}
+<table>
+    {%for i in a%}
+    <th>
+        <tr>Username</tr>
+        <tr>Name</tr>
+        <tr></tr>
+        <tr></tr>
+        <tr></tr>
+    </th>
+    <td>
+        <tr>{{i.username}}</tr>
+        <tr>{{i.first_name}}</tr>
+        <tr><a href="user_profiles/{{i.id}}/"> Profile</a></tr>
+        <tr><a href="omsaccount/edit_profile/{{i.id}}/">Edit Profile</a></tr>
+        <tr><a href="omsaccount/delete_profile/{{i.id}}/">Delete Profile</a></tr>
+    </td>
+    {%endfor%}
+</table>
+{%endblock%}

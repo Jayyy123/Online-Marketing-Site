@@ -1,0 +1,27 @@
+{%extends 'main.html' %}
+
+{%load static%}
+{%block content%}
+<hr>
+<div>
+    <span>
+<table>
+    <tr>
+        <th>Username</th>
+        <th></th>
+        <th></th>
+        <th></th>
+    </tr>
+    {%for i in a%}
+    <tr>
+        <td>{{i.username}}</td>
+        <td><a href="/profile/{{i.id}}/"> View</a></td>
+        <td><a href="/edit_profile/{{i.id}}/">Edit </a></td>
+        <td><a href="/delete_profile/{{i.id}}/">Delete </a></td>
+    </tr>
+    {%endfor%}
+</table>
+</span>
+</div>
+<hr>
+{%endblock%}

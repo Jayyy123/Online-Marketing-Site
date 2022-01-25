@@ -1,0 +1,10 @@
+{%extends 'main.html'%}
+{%load static%}
+{%block content%}
+<form action="{% url 'login' %}"  method="post" >
+    {%csrf_token%}
+    <input type="text" name="username" placeholder="Enter your Username here."/>
+    <input type="password" name="password" placeholder="*******"/>
+    <input type="submit" placeholder="login">
+</form>
+{%endblock%}
